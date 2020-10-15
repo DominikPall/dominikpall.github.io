@@ -6,8 +6,6 @@ body {
 }
 #top {
     background-color: #242943;
-    padding-top: 2vh;
-    margin-bottom: 2vh;
 }
 #top a {
     color: white;
@@ -18,7 +16,6 @@ body {
 #top h4 {
     display: inline;
     letter-spacing: 0.2em;
-    padding: 2px;
     margin: 1vh;
     background-color: white;
     color:  #242943;
