@@ -1,9 +1,14 @@
+* {
+    overflow-x: hidden;
+}
+
 body {
     font-family: "Source Sans Pro";
     font-size: 17pt;
     letter-spacing: 0.025em;
     background-color:#242943;
 }
+
 #top {
     background-color: #242943;
 }
