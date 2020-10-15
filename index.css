@@ -1,7 +1,6 @@
 * {
     border-radius: 0 !important;
     scroll-behavior: smooth;
-    overflow-x: hidden;
   }
 
 #title h1,#title h6,.check {
