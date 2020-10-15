@@ -46,6 +46,14 @@
     background-color: #e7b788;
 }
 
+.pc {
+    display: block;
+}
+
+.mobile {
+    display: none;
+}
+
 @media only screen and (max-width: 600px) {
     #title h1,#title h6,.check {
         margin-left: 5vh;
@@ -54,5 +62,13 @@
     #title .check {
         margin-bottom: 45vh;
         margin-left: 15vh;
+    }
+
+    .pc {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
     }
   }
