@@ -31,11 +31,22 @@ body {
 }
 
 .email a {
-    margin-top: 8vh;
+    margin-top: 4vh;
     margin-left: 5vh;
 }
 
 .email p {
-    margin-bottom:8vh;
+    margin-bottom:4vh;
     margin-left: 10vh;
 }
+
+@media only screen and (max-width: 600px) {
+    .email p {
+        margin-bottom:4vh;
+        margin-left: 5vh;
+    }
+    .email a {
+        margin-top: 4vh;
+        margin-left: 2vh;
+    }
+  }
