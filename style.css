@@ -49,6 +49,7 @@ body {
     .email p {
         margin-bottom:4vh;
         margin-left: 5vh;
+        letter-spacing: 0;
     }
     .email a {
         margin-top: 4vh;
