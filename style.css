@@ -1,0 +1,44 @@
+body {
+    font-family: "Source Sans Pro";
+    font-size: 17pt;
+    letter-spacing: 0.025em;
+    background-color:#242943;
+}
+#top {
+    background-color: #242943;
+    padding-top: 2vh;
+    margin-bottom: 2vh;
+}
+#top a {
+    color: white;
+    padding: 1vh;
+    display: inline;
+}
+
+#top h4 {
+    display: inline;
+    letter-spacing: 0.2em;
+    padding: 2px;
+    margin: 1vh;
+    background-color: white;
+    color:  #242943;
+}
+
+#top .menu {
+    color: white;
+}
+
+.email a,.email p {
+    color: white;
+    letter-spacing: 0.2em;
+}
+
+.email a {
+    margin-top: 8vh;
+    margin-left: 5vh;
+}
+
+.email p {
+    margin-bottom:8vh;
+    margin-left: 10vh;
+}
