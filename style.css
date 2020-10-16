@@ -22,6 +22,7 @@ body {
     letter-spacing: 0.2em;
     margin: 1vh;
     background-color: white;
+    padding: 3px;
     color:  #242943;
 }
 
@@ -50,6 +51,7 @@ body {
         margin-left: 5vh;
         letter-spacing: 0em;
     }
+    
     .email a {
         margin-top: 4vh;
         margin-left: 2vh;
