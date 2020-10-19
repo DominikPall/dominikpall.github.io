@@ -4,12 +4,13 @@ body {
     letter-spacing: 0.025em;
     background-color:#242943;
 }
-
+hr {
+    border-color: white;
+}
 #top {
     background-color: #242943;
 }
 #top a {
-    color: white;
     display: inline;
 }
 
@@ -17,7 +18,7 @@ body {
     display: inline;
     letter-spacing: 0.2em;
     margin: 1vh;
-    background-color: white;
+
     padding: 3px;
     color:  #242943;
 }
@@ -27,7 +28,6 @@ body {
 }
 
 .email a,.email p {
-    color: white;
     letter-spacing: 0.2em;
 }
 
