@@ -36,11 +36,11 @@
     }
 
     .desc {
-        font-size: 50%;
+        font-size: 100%;
         margin-top:2vw;
     }
 
-    .sudoku {
+    .playButton {
         width: 100%;
     }
   }
