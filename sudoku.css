@@ -1,0 +1,31 @@
+.title {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 8vw;
+    font-weight: bolder;
+    color: white;
+}
+
+.desc {
+    color: white;
+    text-align: center;
+    margin-top: 2vw;
+    margin-left: 100px;
+}
+
+.sudoku{
+    color: white;
+    background-color: #6fc3df;
+}
+@media only screen and (max-width: 600px) {
+    .title {
+        font-size: 10vw;
+    }
+
+    .desc {
+        font-size: 5vw;
+        margin-top:2vw;
+        margin-left: 10vw;
+        margin-right: 10vw;
+    }
+  }

@@ -16,7 +16,9 @@
     margin-bottom: 45vh;
     margin-left: 70vh;
 }
-
+#middle {
+    overflow: hidden;
+}
 .no-padding{
     padding: 0%!important;
 }
