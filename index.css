@@ -12,12 +12,12 @@
 }
 #title h1,#title h6,.check {
     color: white;
-    margin-left: 35vh;
+    margin-left: 20%;
 }
 
 #title hr {
     width: 50%;
-    margin-left:35vh;
+    margin-left:20%;
 }
 
 .buttongrp hr {
@@ -25,12 +25,12 @@
 }
 
 #title h1 {
-    margin-top: 40vh;
+    margin-top: 20%;
 }
 
 #title .check {
     margin-bottom: 45vh;
-    margin-left: 70vh;
+    margin-left: 40%;
 }
 #middle {
     overflow: hidden;
