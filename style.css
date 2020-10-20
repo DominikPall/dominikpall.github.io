@@ -33,23 +33,23 @@ hr {
 
 .email a {
     margin-top: 4vh;
-    margin-left: 5vh;
+    margin-left: 4vw;
 }
 
 .email p {
     margin-bottom:4vh;
-    margin-left: 10vh;
+    margin-left: 5vw;
 }
 
 @media only screen and (max-width: 600px) {
     .email p {
         margin-bottom:4vh;
-        margin-left: 5vh;
+        margin-left: 5vw;
         letter-spacing: 0em;
     }
     
     .email a {
         margin-top: 4vh;
-        margin-left: 2vh;
+        margin-left: 2vw;
     }
   }
