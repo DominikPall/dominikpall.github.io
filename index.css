@@ -53,6 +53,8 @@
 
 .sudoku {
     background-color: #6fc3df;
+    width: 100%;
+    text-align: center;
 }
 
 .sortAl {
