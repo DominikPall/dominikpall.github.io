@@ -42,6 +42,10 @@ hr {
 }
 
 @media only screen and (max-width: 600px) {
+    #top h4 {
+        display: inline;
+        letter-spacing: 0.15em;
+    }
     .email p {
         margin-bottom:4vh;
         margin-left: 5vw;

@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Dominik Pall-Sorting</title>
+        <title>Dominik Pall-Sudoku</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
         <script src="https://kit.fontawesome.com/e060c03e60.js" crossorigin="anonymous"></script>
@@ -10,44 +10,45 @@
         <link rel="stylesheet" href="programStyle.css">
         <style>
             .email p, .email a, .desc, .title, #top a{
-                color: #8d82c4;
+                color: #6fc3df;
             }   
-
+            
             #top h4 { 
-                background-color: #8d82c4;
+                background-color: #6fc3df;
                 color: white;
             }
+
             .playButton {
-                background-color: #8d82c4;
+                background-color: #6fc3df;
             }
         </style>
     </head>
     <body>
         <nav class="navbar fixed-top" id="top">
             <div id="col-sm-11">
-                <a href="index.html"><h4>DOMINIK PALL</h4></a>
+                <a href="index.php"><h4>DOMINIK PALL</h4></a>
                 <a href="https://github.com/DominikPall" class="fab fa-github-alt" ></a>
                 <a href= "https://www.linkedin.com/in/dominik-pall-b0a9b7146/" class="fab fa-linkedin-in"></a>
+                <a href="account/login.php" class="fas fa-sign-in-alt"></a>
             </div>
         </nav>
         <div class="col-sm-12 title">
-            <p>SORTING ALGORITHM</p>
+            <p>SUDOKU</p>
         </div>
+
         <div class="col-sm-12 desc">
             <p>
-                Have you run into a problem of having multiple unit's of similar item ? <br>
-                This program is design to take care of sorting it for you, so you don't have to do it yourself.
+                Program created to solve or generate sudoku levels of any complexity.<br>
+                You can easily just enter numbers into designed boxes, and the algorithm will take care of the rest. <br>
             </p>
         </div>
         <div class="col-sm-12 text-center">
                 <a href="" role ="button" class="btn btn-outline-dark playButton" > <h3>PLAY</h3> </a>
         </div>
         <footer>
-            <div>
-                <div class="col-sm-12 email">
-                    <a class="far fa-envelope">Email </a>
-                    <p>Dominik.Pall.Eu@gmail.com</p>
-                </div>
+            <div class="col-sm-12 email">
+                <a class="far fa-envelope">Email </a>
+                <p>Dominik.Pall.Eu@gmail.com</p>
             </div>
         </footer>
     </body>
