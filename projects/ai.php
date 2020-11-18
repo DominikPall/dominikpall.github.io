@@ -1,4 +1,4 @@
-<?php include_once 'Nav&Foot/header.php' ?>
+<?php include_once '../Nav&Foot/header.php' ?>
     <div class="col-sm-12 title">
         <p>ARTIFICAL INTELIGENCE</p>
     </div>
@@ -11,4 +11,4 @@
     <div class="col-sm-12 text-center">
             <a href="" role ="button" class="btn btn-outline-dark playButton" > <h3>PLAY</h3> </a>
     </div>
-<?php include_once 'Nav&Foot/footer.php'?>
+<?php include_once '../Nav&Foot/footer.php'?>

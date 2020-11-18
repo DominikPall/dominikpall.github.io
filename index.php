@@ -12,28 +12,28 @@
             <div class="row" id="firstRow">
                 <div class="col-sm-7 no-padding">
                     <div class="buttongrp">
-                        <button class="btn btn-outline-dark sudoku" onclick="window.location.href='sudoku.php';"> SUDOKU <br> <br> <br>
+                        <button class="btn btn-outline-dark sudoku" onclick="window.location.href='/projects/sudoku.php';"> SUDOKU <br> <br> <br>
                             GENERATING AND ALGORITHMIC SOLVING 
                         </button>
                     </div>
                 </div>  
                 <div class="col-sm-5 no-padding">
                     <div class="buttongrp">
-                        <button class="btn btn-outline-dark sortAl" onclick="window.location.href='sortingAlgorithm.php';"> SORTING ALGORITHM <br> <br> <br>
+                        <button class="btn btn-outline-dark sortAl" onclick="window.location.href='/projects/sortingAlgorithm.php';"> SORTING ALGORITHM <br> <br> <br>
                             ALGORITHM USED TO SORT ARRAYS
                         </button>
                     </div>
                 </div>
                 <div class="col-sm-5 no-padding">
                     <div class="buttongrp">
-                        <button class="btn btn-outline-dark pathFi" onclick="window.location.href='pathFinding.php';"> PATH FINDING <br> <br> <br>
+                        <button class="btn btn-outline-dark pathFi" onclick="window.location.href='/projects/pathFinding.php';"> PATH FINDING <br> <br> <br>
                             FIND POINT A FROM POINT B
                         </button>
                     </div>
                 </div>
                 <div class="col-sm-7 no-padding">
                     <div class="buttongrp">
-                        <button class="btn btn-outline-dark ai" onclick="window.location.href='ai.php';">ARTIFICAL INTELIGENCE <br> <br> <br>
+                        <button class="btn btn-outline-dark ai" onclick="window.location.href='/projects/ai.php';">ARTIFICAL INTELIGENCE <br> <br> <br>
                             SNAKE GAME PLAYED BY AI
                         </button>
                     </div>

@@ -1,3 +1,7 @@
+<?php 
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -15,6 +19,12 @@
                 <a href="index.php"><h4>DOMINIK PALL</h4></a>
                 <a href="https://github.com/DominikPall" class="fab fa-github-alt" ></a>
                 <a href= "https://www.linkedin.com/in/dominik-pall-b0a9b7146/" class="fab fa-linkedin-in"></a>
-                <a href="account/login.php" class="fas fa-sign-in-alt"></a>
+                <?php
+                    if (isset($_SESSION["userid"])) {
+                        echo "<a href='/account/profile.php' class='fas fa-user-circle'></a>";
+                    } else {
+                        echo "<a href='/account/login.php' class='fas fa-sign-in-alt'></a>";
+                    }
+                ?>
             </div>
         </nav>
