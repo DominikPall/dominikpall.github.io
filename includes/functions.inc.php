@@ -20,12 +20,12 @@ function invalidUid($username) {
     return $result;
 }
 
-function invalidEmail($username) {
+function invalidEmail($email) {
     $result;
     if(filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $result = true;
-    } else {
         $result = false;
+    } else {
+        $result = true;
     }
     return $result;
 }
@@ -132,6 +132,16 @@ function deleteAccount($conn) {
     header("location: logout.inc.php");
 }
 
+function emptyInputEdit($name, $email) {
+    $result;
+    if(empty($name) || empty($email)) {
+        $result = true;
+    } else {
+        $result = false;
+    }
+    return $result;
+}
+
 function editProfile($conn, $name, $email) {
     session_start();
     $sql = "UPDATE users 
@@ -145,9 +155,11 @@ function editProfile($conn, $name, $email) {
 
     $uid = $_SESSION["useruid"];
     mysqli_stmt_bind_param($stmt, "sss", $name, $email, $uid);
+    $_SESSION["username"] = $name;
+    $_SESSION["userEmail"] = $email;
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
-    header("location: ../index.php");
+    header("location: ../account/profile.php");
 
     }
 ?>

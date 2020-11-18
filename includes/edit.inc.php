@@ -7,13 +7,13 @@ if (isset($_POST["submit"])) {
     require_once 'dbh.inc.php';
     require_once 'functions.inc.php';
 
-    if (emptyInputSignUp($name, $email, $username, $pwd, $pwdRepeat) !== false) {
-        header("location: ../account/edit.php?error=emptyinput");
+    if (emptyInputEdit($name, $email) !== false) {
+        header("location: ../account/editProfile.php?error=emptyinput");
         exit();
     }
 
     if (invalidEmail($email) !== false) {
-        header("location: ../account/edit.php?error=invalidEmail");
+        header("location: ../account/editProfile.php?error=invalidEmail");
         exit();
     }
 

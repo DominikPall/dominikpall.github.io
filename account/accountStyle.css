@@ -1,0 +1,55 @@
+.signup-form h2, .login-form h2, .edit-form h2 {
+    margin-top: 30vh;
+    color: aliceblue;
+    text-align: center;
+}
+
+.signup-form form, .login-form form, .edit-form form {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signup-form form input, .login-form form input, .edit-form form input {
+    margin: 10px;
+}
+
+.signup-form p, .login-form p, .edit-form p {
+    color:white;
+    text-align: center;
+}
+
+.signup-form .btn, .login-form .btn, .edit-form .btn {
+    color:#242943;
+    background-color: aliceblue;
+}
+
+.signup-form .bth :hover, .login-form .btn:hover {
+    background-color: #242943;
+}
+
+.login-form a {
+    color: aliceblue;
+}
+
+.acc-manipulation{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    color: aliceblue;
+    margin-top: 20px;
+}
+
+.acc-info {
+    margin-top: 35vh;
+    color: aliceblue;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.acc-manipulation .btn {
+    margin: 5px;
+    background-color: aliceblue;
+    color: #242943;
+}

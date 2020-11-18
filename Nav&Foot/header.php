@@ -6,7 +6,7 @@
     $back = "#ffffff";
     $text = "#242943";
     $style = "";
-    $link = "";
+    $link = "accountStyle.css";
 
     foreach ($customColor as $value) {
         if(basename($_SERVER["REQUEST_URI"], ".php") == $value) {
