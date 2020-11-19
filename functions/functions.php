@@ -83,7 +83,7 @@ function emptyInputLogin($username, $pwd) {
 
 
 function loginUser($conn, $username, $pwd) {
-    $user = uidExists($conn, $username, $username);
+    $user = useridTaken($conn, $username, $username);
     
     if($user === false) {
         header("location: ../account/login.php?error=wrongLogin");
@@ -141,7 +141,7 @@ $stmt = $conn->prepare($sql);
     $_SESSION["userEmail"] = $email;
     $stmt->bind_param("sss", $name, $email, $uid);
 
-    $stmt.execute();
+    $stmt->execute();
     header("location: ../account/profile.php");
 
     }
