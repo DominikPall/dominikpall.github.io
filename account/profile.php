@@ -11,10 +11,9 @@
 
 </div>
 <div class="acc-manipulation">
-
-    <a href='../includes/logout.inc.php' role="button" class="btn btn-outline-dark">Log Out</a>
+    <a href='../functions/logout.func.php' role="button" class="btn btn-outline-dark">Log Out</a>
     <a href='editProfile.php' role="button" class="btn btn-outline-dark" >Edit Account</a>
-    <a href='../includes/deleteAccount.inc.php' role="button" class="btn btn-outline-dark" >Delete Account</a>
+    <a href='../functions/deleteAccount.func.php' role="button" class="btn btn-outline-dark" >Delete Account</a>
 </div>
 <?php
     include_once '../Nav&Foot/footer.php';

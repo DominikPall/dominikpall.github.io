@@ -22,6 +22,7 @@
 .signup-form .btn, .login-form .btn, .edit-form .btn {
     color:#242943;
     background-color: aliceblue;
+    margin: 5px;
 }
 
 .signup-form .bth :hover, .login-form .btn:hover {

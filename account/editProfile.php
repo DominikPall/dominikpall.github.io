@@ -2,7 +2,7 @@
 
 <section class="edit-form">
     <h2> Edit Your Profile </h2>
-    <form action="../includes/edit.inc.php" method="post">
+    <form action="../functions/edit.func.php" method="post">
         <input type="text" name="name"
 
         value="<?php echo $_SESSION['username'];?>">

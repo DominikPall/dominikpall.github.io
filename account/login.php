@@ -3,7 +3,7 @@
 
 <section class="login-form">
     <h2> Log In </h2>
-    <form action="../includes/login.inc.php" method="post">
+    <form action="../functions/login.func.php" method="post">
         <input type="text" name="name" placeholder="Username/Email...">
         <input type="password" name="pwd" placeholder="Password...">       
         <?php if(isset($_GET["error"])) {
@@ -13,9 +13,9 @@
                 echo "<p>Incorrect login information!</p>";
             } 
         }
-        ?>
-        <a href="signup.php" role ="button" class="btn btn-outline-dark">Sign Up</a>
+        ?>       
         <button type="submit" name="submit" role ="button" class="btn btn-outline-dark">Log In</button>
+        <a href="signup.php" role ="button" class="btn btn-outline-dark">Sign Up</a>
     </form>
 
     

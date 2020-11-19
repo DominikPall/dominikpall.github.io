@@ -1,6 +1,6 @@
 <?php 
 
-function emptyInputSignUp($name, $email, $username, $pwd, $pwdRepeat) {
+function emptyInSignUp($name, $email, $username, $pwd, $pwdRepeat) {
     $result;
     if(empty($name) || empty($email) || empty($username) || empty($pwd) || empty($pwdRepeat)) {
         $result = true;
@@ -10,7 +10,7 @@ function emptyInputSignUp($name, $email, $username, $pwd, $pwdRepeat) {
     return $result;
 }
 
-function invalidUid($username) {
+function invalidUserId($username) {
     $result;
     if (!preg_match('/^[a-zA-Z0-9]*$/', $username)) {
         $result = true;
@@ -30,7 +30,7 @@ function invalidEmail($email) {
     return $result;
 }
 
-function pwdMatch($pwd, $pwdRepeat) {
+function passwordMismatch($pwd, $pwdRepeat) {
     $result;
     if($pwd !== $pwdRepeat) {
         $result = true;
@@ -40,16 +40,12 @@ function pwdMatch($pwd, $pwdRepeat) {
     return $result;
 }
 
-function uidExists($conn, $username, $email) {
+function useridTaken($conn, $username, $email) {
     $sql = "SELECT * FROM users WHERE usersUid = ? OR usersEmail = ?;";
-    $stmt = mysqli_stmt_init($conn);
-    if (!mysqli_stmt_prepare($stmt, $sql)) {
-        header("location: ../account/signup.php?error=stmtFailed");
-        exit();
-    }
+    $stmt = $conn->prepare($sql);
 
-    mysqli_stmt_bind_param($stmt, "ss", $username, $email);
-    mysqli_stmt_execute($stmt);
+    $stmt->bind_param("ss", $username, $email);
+    $stmt->execute();
 
     $resultData = mysqli_stmt_get_result($stmt);
 
@@ -65,18 +61,13 @@ function uidExists($conn, $username, $email) {
 
 function createUser($conn, $name, $email, $username, $pwd) {
     $sql = "INSERT INTO users (usersName, usersEmail, usersUid, usersPwd) VALUES (?, ?, ?, ?);";
-    $stmt = mysqli_stmt_init($conn);
-    if (!mysqli_stmt_prepare($stmt, $sql)) {
-        header("location: ../account/signup.php?error=stmtFailed");
-        exit();
-    }
+    $stmt = $conn->prepare($sql);
 
     $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
 
-    mysqli_stmt_bind_param($stmt, "ssss", $name, $email, $username, $hashedPwd);
-    mysqli_stmt_execute($stmt);
-    mysqli_stmt_close($stmt);
-    header("location: ../index.php?error=none");
+    $stmt->bind_param("ssss", $name, $email, $username, $hashedPwd);
+    $stmt->execute();
+    header("location: ../account/login.php?error=none");
     exit();    
 }
 
@@ -92,14 +83,14 @@ function emptyInputLogin($username, $pwd) {
 
 
 function loginUser($conn, $username, $pwd) {
-    $uidExist = uidExists($conn, $username, $username);
+    $user = uidExists($conn, $username, $username);
     
-    if($uidExist === false) {
+    if($user === false) {
         header("location: ../account/login.php?error=wrongLogin");
         exit();
     }
 
-    $pwdHashed = $uidExist['usersPwd'];
+    $pwdHashed = $user['usersPwd'];
     $checkPwd = password_verify($pwd, $pwdHashed);
     if($checkPwd === false) {
         header("location: ../account/login.php?error=wrongLogin");
@@ -107,10 +98,10 @@ function loginUser($conn, $username, $pwd) {
         
     } else if ($checkPwd === true) {
         session_start();
-        $_SESSION["username"] = $uidExist["usersName"];
-        $_SESSION["userEmail"] = $uidExist["usersEmail"];
-        $_SESSION["userid"] = $uidExist["usersId"];
-        $_SESSION["useruid"] = $uidExist["usersUid"];
+        $_SESSION["username"] = $user["usersName"];
+        $_SESSION["userEmail"] = $user["usersEmail"];
+        $_SESSION["userid"] = $user["usersId"];
+        $_SESSION["useruid"] = $user["usersUid"];
         header("location: ../index.php");
         exit();
     }
@@ -120,16 +111,12 @@ function deleteAccount($conn) {
     session_start();
     $sql = "DELETE FROM users WHERE usersUid = ?";
 
-    $stmt = mysqli_stmt_init($conn);
-    if (!mysqli_stmt_prepare($stmt, $sql)) {
-        header("location: ../account/signup.php?error=stmtFailed");
-        exit();
-    }
+    $stmt = $conn->prepare($sql);
     $uid = $_SESSION["useruid"];
-    mysqli_stmt_bind_param($stmt, "s", $uid);
-    mysqli_stmt_execute($stmt);
-    mysqli_stmt_close($stmt);
-    header("location: logout.inc.php");
+    $stmt->bind_param("s", $uid);
+    $stmt->execute();
+
+    header("location: logout.func.php");
 }
 
 function emptyInputEdit($name, $email) {
@@ -147,18 +134,14 @@ function editProfile($conn, $name, $email) {
     $sql = "UPDATE users 
             SET usersName = ?, usersEmail = ?
             WHERE usersUid = ?";
-    $stmt = mysqli_stmt_init($conn);
-    if (!mysqli_stmt_prepare($stmt, $sql)) {
-        header("location: ../account/signup.php?error=stmtFailed");
-        exit();
-    }
 
+$stmt = $conn->prepare($sql);
     $uid = $_SESSION["useruid"];
-    mysqli_stmt_bind_param($stmt, "sss", $name, $email, $uid);
     $_SESSION["username"] = $name;
     $_SESSION["userEmail"] = $email;
-    mysqli_stmt_execute($stmt);
-    mysqli_stmt_close($stmt);
+    $stmt->bind_param("sss", $name, $email, $uid);
+
+    $stmt.execute();
     header("location: ../account/profile.php");
 
     }
